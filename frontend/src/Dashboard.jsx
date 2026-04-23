@@ -15,7 +15,7 @@ export default function Dashboard() {
   const headers = { authorization: token };
 
 const fetchItems = async () => {
-  const res = await axios.get("http://localhost:5000/api/items", {
+  const res = await axios.get("https://lostandfound-ozmi.onrender.com/api/items", {
     headers: { authorization: token }
   });
 
@@ -28,13 +28,13 @@ const fetchItems = async () => {
 
   const addItem = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/items", form, { headers });
+    await axios.post("https://lostandfound-ozmi.onrender.com/api/items", form, { headers });
     fetchItems();
   };
 
 
   const deleteItem = async (id) => {
-    await axios.delete(`http://localhost:5000/api/items/${id}`, { headers });
+    await axios.delete(`https://lostandfound-ozmi.onrender.com/api/items/${id}`, { headers });
     fetchItems();
   };
 
@@ -43,7 +43,7 @@ const searchItem = async () => {
 
   try {
     const res = await axios.get(
-      `http://localhost:5000/api/items/search?name=${encodeURIComponent(search)}`,
+      `https://lostandfound-ozmi.onrender.com/api/items/search?name=${encodeURIComponent(search)}`,
       {
         headers: {
           authorization: token
@@ -71,7 +71,7 @@ const searchItem = async () => {
     const updateItem = async () => {
   try {
     await axios.put(
-      `http://localhost:5000/api/items/${editItem._id}`,
+      `https://lostandfound-ozmi.onrender.com/api/items/${editItem._id}`,
       editItem,
       { headers }
     );

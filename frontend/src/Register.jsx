@@ -20,7 +20,7 @@ export default function Register() {
     setError("");
 
     try {
-      await axios.post("http://localhost:5000/api/register", form);
+      await axios.post("https://lostandfound-ozmi.onrender.com/api/register", form);
       alert("Registered successfully");
       navigate("/login");
     } catch (err) {
