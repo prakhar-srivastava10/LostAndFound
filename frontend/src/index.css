@@ -142,29 +142,3 @@ button:hover {
   color: #4a6cf7;
   cursor: pointer;
 }
-
-.app {
-  display: flex;
-  height: 100vh;
-}
-
-/* SIDEBAR FIX */
-.sidebar {
-  width: 220px;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background: #1f2937;
-  color: white;
-  padding: 20px;
-  overflow: hidden; /* sidebar scroll nahi hoga */
-}
-
-/* MAIN CONTENT */
-.main {
-  margin-left: 220px; /* sidebar space */
-  height: 100vh;
-  overflow-y: auto; /* yaha scroll hoga */
-  padding: 20px;
-}
