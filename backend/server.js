@@ -15,6 +15,9 @@ mongoose.connect(process.env.MONGO_URI)
 .catch(err => console.log(err));
 
 /* ================= MODELS ================= */
+app.get("/", (req, res) => {
+  res.send("Lost & Found API is running 🚀");
+});
 
 // USER
 const userSchema = new mongoose.Schema({
